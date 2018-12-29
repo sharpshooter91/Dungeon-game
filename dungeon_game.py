@@ -1,14 +1,5 @@
 import random
 import os
-#draw the grid
-#pick random location for the player
-#pick random location for exit door
-#random location for the monster
-#draw player in the grid
-#take input for movement
-#move the player, unless invalid move (past edges of the grid)
-#check for win/lose
-#clear screen and redraw grid
 
 CEELS = [(0, 0), (1, 0), (2, 0), (3, 0),(4, 0),
                 (0, 1), (1, 1), (2, 1), (3, 1),(4, 1),
@@ -78,8 +69,8 @@ def game_loop():
         draw_map(player)
         valid_moves= get_moves(player)
 
-        print("you are currently in a room {}".format(player)) #fil it with players position
-        print("You can move {}".format(", ".join(valid_moves))) #fill with available moves
+        print("you are currently in a room {}".format(player))
+        print("You can move {}".format(", ".join(valid_moves)))
         print("Enter QUIT to quit")
 
         move = input(">  ")
@@ -109,9 +100,3 @@ print("Welcome to the dungeon!")
 input("press return to start")
 clear_scr()
 game_loop()
-
-    #Good move > change the player position
-    #Bad move? Do not change anythng
-    # On the door? They win:
-    #On the monster? They loos!
-    #Othervise? Loop back around
